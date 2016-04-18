@@ -1,0 +1,28 @@
+<div layout="row" layout-fill>
+    <md-sidenav class="md-sidenav-left sideNav md-whiteframe-7dp" md-component-id="left"
+     md-is-locked-open="sideMenu">
+        <div layout="column" layout-padding class="all">
+            <md-button ui-sref="site">Inicio</md-button>
+            </form>
+        </div>     
+    </md-sidenav>
+    <md-content layout-fill layout-padding>    
+         <calendar-md flex layout layout-fill
+          calendar-direction="direction"
+          on-prev-month="prevMonth"
+          on-next-month="nextMonth"
+          on-day-click="dayClick"
+          title-format="'MMMM y'"
+          ng-model='selectedDate'
+          week-starts-on="firstDayOfWeek"
+          data-start-month="1"
+          data-start-year="2016"
+          tooltips="true"
+          day-format="dayFormat"
+          day-label-format="'EEE'"
+          day-label-tooltip-format="'EEEE'"
+          day-tooltip-format="'fullDate'"
+          day-content="setDayContent"
+          disable-future-selection="false"></calendar-md>
+    </md-content>
+</div>

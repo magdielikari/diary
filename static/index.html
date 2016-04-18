@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="todolist">
+    <head>
+        <meta charset="utf-8">
+        <title>Prueba</title>
+	    <!-- CSS files -->
+	    <link rel="stylesheet" type="text/css" href="bower_components/angular-material/angular-material.css">
+	    <link rel="stylesheet" type="text/css" href="bower_components/material-calendar/dist/angular-material-calendar.css">
+	    <link rel="stylesheet" type="text/css" href="bower_components/sweetalert/dist/sweetalert.css">
+	    <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="/bower_components/sc-date-time/dist/sc-date-time.css">
+	    <link rel="stylesheet" type="text/css" href="dist/css/main.css">
+    </head>
+    <body ng-controller="MainController" layout="column" ui-view layout-fill>
+        <!-- Angular Material Dependencies -->
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-aria/angular-aria.js"></script>
+        <script src="bower_components/angular-material/angular-material.js"></script>
+        <script src="bower_components/angular-messages/angular-messages.js"></script>
+        <!-- Another Dependencie -->
+        <script src="bower_components/moment/moment.js"></script>
+        <script src="bower_components/moment/locale/es.js"></script>
+        <script src="bower_components/moment/min/moment-with-locales.js"></script>
+        <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+    	<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+     	<script src="bower_components/material-calendar/dist/angular-material-calendar.js"></script>
+        <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <!-- Logic of Angular-->
+        <script src="dist/js/app.js"></script>
+        <script src="dist/js/controllers/MainController.js"></script>
+        <script src="dist/js/controllers/SiteController.js"></script>
+        <script src="dist/js/controllers/ListController.js"></script>
+        <script src="dist/js/controllers/CalendarController.js"></script>
+    </body>
+</html>

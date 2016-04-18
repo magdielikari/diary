@@ -1,0 +1,14 @@
+<md-toolbar>
+    <div flex class="md-toolbar-tools" layout="none">
+        <md-button class="md-icon-button" aria-label="side menu" 
+        ng-click="toggleSideMenu('left')" >
+            <md-icon ng-class="{'fa-plus':!sideMenu, 'fa-minus':sideMenu}"
+             class="fa" style="color:white;"></md-icon>
+        </md-button>
+        <div flex layout="grow" layout-align="center center">
+            <md-button class="md-display-3" ui-sref="layout">ToDoList</md-button>
+        </div>	
+    </div>
+</md-toolbar>
+
+<div ui-view="main" layout-fill></div>   

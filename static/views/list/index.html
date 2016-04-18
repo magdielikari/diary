@@ -1,0 +1,44 @@
+<div layout="row">
+    <md-sidenav class="md-sidenav-left sideNav md-whiteframe-7dp" md-component-id="left"
+     md-is-locked-open="sideMenu">
+        <div layout="column" layout-padding class="all">
+            <md-button ui-sref="site">Inicio</md-button>
+            <md-button ui-sref="calendar">Calendario</md-button>
+            <md-buttom ng-click="clear()">Borrar Todo</md-buttom>
+            <form ng-submit="addActv()">
+              <md-input-container>
+                  <label for="descripción">descripción</label>
+                  <md-icon class="fa fa-info"></md-icon>
+                  <input type="text" ng-model="newActv.desp">
+              </md-input-container> 
+                     
+              <div layout>
+                  <div flex="10" layout layout-align="center center">
+                      <md-icon class="fa fa-clock-o"></md-icon>
+                  </div>
+                 <md-slider flex="grow" md-discrete ng-model="newActv.hora" step="1" min="0" max="23" aria-label="rating">
+                 </md-slider>
+              </div>
+              <div layout>
+                  <div flex="10" layout layout-align="center center">
+                      <md-icon class="fa fa-clock-o"></md-icon>
+                  </div>
+                 <md-slider flex="grow" md-discrete ng-model="newActv.minuto" step="1" min="0" max="59" aria-label="rating">
+                 </md-slider>
+              </div>
+              
+              <md-input-container>
+                  <md-button type="submit">Guardar Actividad</md-button>
+              </md-input-container>
+            </form>
+        </div>     
+    </md-sidenav>
+    <md-content flex>    
+        <md-list layout-padding>
+           <md-list-item layout-padding layout-margin class="md-whiteframe-3dp" ng-repeat="act in todo track by $index">
+              <h3>{{act.desp}}</h3>
+              <p>{{act.fecha|date:'d/MMM/yy'}} - {{act.hora}}:{{act.minuto}}</p>
+           </md-list-item>
+        </md-list>
+    </md-content>    
+</div>
